@@ -1,0 +1,128 @@
+body{
+    margin: auto 0px;
+}
+#filtro{
+    padding-left: 20px;
+    font-size: 0.7em;
+    padding-top: 14px;
+    margin: auto 0px;
+}
+#filtro2{
+    padding-left: 40px;
+    font-size: 0.7em;
+    padding-top: 14px;
+    padding-right: 10px;
+    margin: auto 0px;
+}
+#boton{
+    background-color: lightblue;
+    color:black;
+}
+#colorFondo{
+    background-color:white;
+    margin: auto 0px;
+}
+#colorsito{
+    background-color:#85C8D9;
+    margin: auto 0px;
+}
+
+#botonProyNuevo{
+    float: right;
+    background-color: #129ABC;
+}
+#fondoP{
+    background-color: #129ABC;
+}
+
+.btncerrar{
+    float: right;
+    background: red;
+    width: 10px;
+    height: 8px;
+
+}
+.chica{
+    font-size: 1em;
+    font-family:  sans-serif;
+}
+.Logo{
+    position: relative;
+    width: 180px;
+    height: 80px;
+    left: 16px;
+    top: -20px;
+    opacity:3.8;
+}
+.fondito{
+    background-color: #F7F6F2;
+}
+.txtbuscador{
+    margin-top: 8px;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    width: 240px;
+    height: 30px;
+    padding-left: 5px;
+    margin-left: 1px;
+}
+.txtbuscador2{
+    margin-top: 8px;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    width: 240px;
+    height: 30px;
+    padding-left: 5px;
+    margin-left: 1px;
+}
+
+.card-filtro{
+    float: right;
+    width: 670px; 
+    height: 53px;
+    background-color:#e0d9d9;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    margin: auto 0px;
+}
+.card-filtro2{
+    float: right;
+    width: 540px; 
+    height: 53px;
+    background-color:#e0d9d9;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    margin: auto 0px;
+}
+.boton{
+    margin-top: 8px;
+    background-color: #34A1F5;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    margin-left: 14px;
+    width: 30px;
+    height: 30px;
+    padding-right: 12px;
+    margin-right: -2px;
+ 
+}
+
+
+.grande{
+    margin-left: 15px;
+    font-size: 1.9em;
+    font-family:  sans-serif;
+}
+.mediana{
+   font-size: 1.6em;
+   font-family: Verdana Tahoma, sans-serif;
+}
+
+.nito{
+    font-weight: bold;
+}
+.slider{
+    margin: auto 0px;
+    min-height: 1024px; 
+}
+
