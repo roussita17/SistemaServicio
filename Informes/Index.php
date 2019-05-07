@@ -76,6 +76,31 @@ if (!isset($_SESSION['Usuario'])){
             <br>
         </div>
     </div>
+<!-- Modal que pregunta si quieres eliminar o no ? -->
+ <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">¿Desea Eliminar Este Informe</h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="Eliminar()">Si</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal que muestra el mensaje sobre el resultado de la eliminacion del infomre -->
+   <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h4 class="modal-title">Informe Eliminado Con Exito!!!</h4>
+          <center><button type="button" class="btn btn-default" data-dismiss="modal">Aceptar</button></center>
+        </div>
+      </div>
+    </div>
+  </div>
 <?php require_once 'logout.php' ; ?>
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

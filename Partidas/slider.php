@@ -15,7 +15,7 @@
             <div class="dropdown-menu" aria-labelledby="pagesDropdown">
               <a class="dropdown-item" href="../Proyectos/Nuevo.php">Nuevo Proyecto</a>
               <a class="dropdown-item" href="../Proyectos/Index.php">Mostrador de Proyectos</a>
-              <a class="dropdown-item" href="../RPP.php">Agregar Partida a Proyecto</a>
+              <a class="dropdown-item" href="../RPP.php">Relacion Proyecto Partidas</a>
             </div>
           </li>
         <li class="nav-item dropdown ">

@@ -1,0 +1,14 @@
+class prueba
+{
+int g ;
+int b ;
+boolean d ;
+boolean c ;
+d = 1 ;
+b = g + 1 ;
+System.out.println ( b ) ;
+while ( c = d ) {
+System.out.println ( d ) ;
+}
+}
+

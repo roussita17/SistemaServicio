@@ -4,9 +4,20 @@ $(document).ready(function(){
 function cierraFormulario(){
     onclick="document.getElementById('Formulario').style.display='none'";
 }
-
 function selecInforme(cve,tipo){
     alert("Hola 7u7");
+}
+var cveglobal; 
+var tipgloval;
+function preguntar(id,tipo){
+    cveglobal = id ;
+    tipgloval = tipo ; 
+    $('#myModal').modal('show');
+}
+function Eliminar(){
+    console.log(cveglobal);
+    console.log(tipgloval);
+    DeleteInforme(cveglobal,tipgloval);
 }
 function DeleteInforme(cve,tipo)
 {
@@ -17,7 +28,7 @@ function DeleteInforme(cve,tipo)
         type:'POST',
         success:function(response){
             console.log(response);
-            alert('Datos Eliminados');
+            $("#myModal2").modal('show');
             recargaTabla();
         }
     });

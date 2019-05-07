@@ -8,7 +8,7 @@ $registros = $bd->query("SELECT `NumPartida`, `Descripcion` FROM `partidas` WHER
 if ($registros->num_rows > 0 ){
     while($reg = mysqli_fetch_array($registros)){
       $np = $reg['NumPartida'];
-      $dscr = $reg['Descripcion'];
+      $dscr = utf8_encode($reg['Descripcion']);
     }
 }
 $bd->close();

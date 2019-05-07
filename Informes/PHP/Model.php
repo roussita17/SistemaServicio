@@ -27,7 +27,7 @@ switch ($data) {
                 $tabla .= '<td>'.$reg[2].'</td>';
                 $tabla .= '<td><a href="Documentos/'.$reg[3].'" download="'.$reg[4].'">'.$reg[4].'</a></td>';
                 $tabla .= '<td><button class="btn" onclick="selecInforme'."('".$reg[0]."','".$reg[2]."'".')">Ver Mas</button></td>';
-                $tabla .= '<td><button class="btn" onclick="DeleteInforme'."('".$reg[0]."','".$reg[2]."'".')">Eliminar</button></td>';
+                $tabla .= '<td><button class="btn" onclick="preguntar'."('".$reg[0]."','".$reg[2]."'".')">Eliminar</button></td>';
                 $tabla .= '</tr>';
             }
         }
