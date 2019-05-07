@@ -1,3 +1,28 @@
+$(document).ready(function(){
+    $('#tablaMaster').DataTable({
+        "language": {
+            //"url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+            "decimal": "",
+            "emptyTable": "No hay información",
+            "info": "Mostrando _START_ a _END_ de _TOTAL_ Partidas Registradas",
+            "infoEmpty": "Mostrando 0 to 0 of 0 Partidas Registradas",
+            "infoFiltered": "(Filtrado de _MAX_ Partidas Registradas)",
+            "infoPostFix": "",
+            "thousands": ",",
+            "lengthMenu": "Mostrar _MENU_ Partidas Registradas",
+            "loadingRecords": "Cargando...",
+            "processing": "Procesando...",
+            "search": "Buscar:",
+            "zeroRecords": "Sin resultados encontrados",
+            "paginate": {
+                "first": "Primero",
+                "last": "Ultimo",
+                "next": "Siguiente",
+                "previous": "Anterior"
+            }
+          }
+    });
+});
 function modificar(valor){
     //alert("me has mandado a llamar");
     document.getElementById('Formulario').style.display='block';

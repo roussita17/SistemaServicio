@@ -3,7 +3,6 @@ session_start();
 if (!isset($_SESSION['Usuario'])){
   header('Location: index.php');
 }
-//echo $_SESSION['Usuario']; 
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,23 +13,15 @@ if (!isset($_SESSION['Usuario'])){
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Sistema Servicio </title>
-
-    <!-- Bootstrap core CSS-->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-
-    <!-- Page level plugin CSS-->
     <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
-
-  
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-<link rel="stylesheet" href="css/sb-admin.css">
-<link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="css/sb-admin.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link type="text/css" rel="stylesheet" href="css/estilos.css"/>   
+    <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
 </head>
 <body>
 <body id="page-top" class="fondito">
@@ -78,6 +69,5 @@ if (!isset($_SESSION['Usuario'])){
     <!-- Demo scripts for this page-->
     <script src="js/demo/datatables-demo.js"></script>
     <script src="js/demo/chart-area-demo.js"></script>
-
 </body>
 </html>

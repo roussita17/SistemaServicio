@@ -19,8 +19,17 @@
             <div class="dropdown-menu" aria-labelledby="pagesDropdown">
               <a class="dropdown-item" href="../Proyectos/Nuevo.php">Nuevo Proyecto</a>
               <a class="dropdown-item" href="../Proyectos/Index.php">Mostrador de Proyectos</a>
-              <a class="dropdown-item" href="../Proyectos/AgregarInforme.php">Agregar Informe</a>
-              <a class="dropdown-item" href="../Proyectos/Registro.html">Agregar Partidas</a>
+              <a class="dropdown-item" href="../Proyectos/RPP.php">Agregar Partida a Proyecto</a>
+              </div>
+          </li>
+        <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-file-pdf"></i>
+              <span>Informes</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+              <a class="dropdown-item" href="Index.php">Mostrador de Informes</a>
+              <a class="dropdown-item" href="AgregarInforme.php">Agregar Informe</a>
             </div>
           </li>
         <li class="nav-item dropdown">
@@ -33,10 +42,13 @@
             <a class="dropdown-item" href="../Partidas/NuevaPartida.php">Crear una nueva Partida</a>
           </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Reporte.html">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-fw fa-table"></i>
             <span>Reportes</span></a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item" href="../Reportes/Index.php">Crear Reporte</a>
+          </div>
         </li>
       </ul>
 </div>

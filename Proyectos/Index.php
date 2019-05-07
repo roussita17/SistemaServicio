@@ -20,6 +20,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/w3.css">
@@ -42,26 +43,6 @@
 
            <!-- Poner todo el desmadre que quieras aqui xD  -->
            
-             <form class="card-filtro">                          
-                <div class="input-group">
-                  <button type="button" class="boton" onClick = "checar()" ><i class="fas fa-fw fa-search"></i></button>
-                  <input type="text" class="txtbuscador" id="txtsrch" placeholder="Buscar">
-                  <label id="filtro">
-                    <label class="radio-inline">
-                      <input type="radio" id="r1" name="optradio" value= "clave" checked>Clave del Proyecto
-                    </label>
-
-                    <label class="radio-inline">
-                      <input type="radio" name="optradio" value= "Titulo">T&iacute;tulo de Proyecto
-                    </label>
-
-                    <label class="radio-inline">
-                      <input type="radio" name="optradio" value= "Director">Director de Proyecto
-                    </label>
-                  </label>          
-                </div>  
-               </form>          
-           <br><br><br>
            <div class="card mb-0" id="colorsito">
              <div class="card-header">
                <i class="fas fa-table"></i>
@@ -70,50 +51,8 @@
             </div>
 
             <div class="card-body" id="colorFondo">
-           <div  class="table-responsive">
-            <table class="table table-hover" width="100%" cellspacing="0">
-              <thead>
-              <tr>
-                 <th>Clave del Proyecto</th>
-                 <th>T&iacute;tulo del Proyecto</th>
-                 <th>Director del Proyecto</th>
-                 <th>Monto Aprobado</th>
-                 <th></th>
-                </tr>
-               </thead>
-            <tbody>
-                <?php
-                include_once 'PHP/Conexion.php';
-                $bd = new Conexion(); 
-                $registros = $bd->query("SELECT `CveP`,`TituloP`,`DirProy`,`MontoAp` FROM `proyectos`");
-                if ($registros->num_rows > 0 ){
-                    while($reg = mysqli_fetch_array($registros)){
-                        echo '<tr>' ;
-                        //echo $reg['ID'].'<br>';
-                        echo '<td>'.$reg['CveP'].'</td>';
-                        echo '<td>'.$reg['TituloP'].'</td>';
-                        echo '<td>'.$reg['DirProy'].'</td>';
-                        echo '<td>'.$reg['MontoAp'].'</td>';
-                        echo '<td><button id="boton" class="btn" onclick="selecInforme'."('".$reg['CveP']."'".')">
-                        Ver M&aacute;s <span class="glyphicon">&#xe081;</span>
-                        </button></td>';
-                        echo '</tr>';
-                    }
-                }
-                $bd->close();
-                ?>
-           </tbody>
-
-
-
-           </table>
-           <ul class="pagination  justify-content-end" style="margin:20px 0">
-             <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
-             <li class="page-item"><a class="page-link" href="#">1</a></li>
-             <li class="page-item"><a class="page-link" href="#">2</a></li>
-             <li class="page-item"><a class="page-link" href="#">3</a></li>
-             <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
-           </ul>
+           <div id= "tablaFrame" class="table-responsive">
+            
            </div> 
         </div>
       </div>
@@ -137,6 +76,17 @@
             </div>
             <br>
         </div>
+    </div>
+    <div class="modal fade" id="dialogo" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p id ="resultados"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" >Aceptar</button>
+        </div>
+      </div>
     </div>
 <?php require_once 'logout.php' ; ?>
 

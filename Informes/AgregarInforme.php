@@ -43,25 +43,49 @@
            <div class="card card-register mx-auto mt-4">
            <div class="card-header" id="fondoP">
              <span class="mediana nito ">Agregar Informes a Proyecto Existente</span>
-            </div>
+           </div>
            <div class="card-body">
             <div>
-            <form action="Informes\InsertarInforme.php" method="post" enctype="multipart/form-data">
-            Clave del Proyecto:
-            <input class="w3-input" type = "Text" placeholder = "Clave del Proyecto" name="cvep" id="cvep">
-            </div><br>
-            <div class="">
-              <label>Entrega de Informes:</label><br>
-              <select class="form-control" id="sel1" name="sel1">
-                <option>1er Avance</option>
-                <option>2do Avande</option>
-                <option>3er Avance</option>
-                <option>Informe Final</option>
-              </select>
-              <br><br>
-              <input  class ="form-control" type="file" name="archivo" id="archivo">
-              <br><br>
-              <input type = "submit" value="Agregar" class="btn" id="botonProyNuevo">
+            
+            <form action="PHP/InsertarInforme.php" method="post" enctype="multipart/form-data">
+            <div class="input-group mb-3">
+              <label>
+                Nombre del Proyecto:
+                <select class = "form-control" id="cvep" name = "cvep">
+                  <?php
+                      require 'PHP/Conexion.php';
+                      $bd = new Conexion(); 
+                      $registros = $bd->query("SELECT `CveP`,`TituloP` FROM `proyectos`");
+                      if ($registros->num_rows > 0 ){
+                      while($reg = mysqli_fetch_array($registros)){
+                          echo '<option value="'.$reg[0].'">'.$reg[1].'</option>' ; 
+                        }
+                      }
+                  ?>
+                </select>
+              </label>
+            </div>
+              <div class="">
+                <label>Entrega de Informes:</label><br>
+                <select class="form-control" id="sel1" name="sel1">
+                  <option>1er Avance</option>
+                  <option>2do Avande</option>
+                  <option>3er Avance</option>
+                  <option>Informe Final</option>
+                </select><br>
+                <div class="form-group row">
+                  <div class="col-xs-4">
+                    <label>Del: </label><input type = "date" class="form-control" name="fini" id="fini" value="2017-06-01">
+                  </div>
+                  <div class="col-xs-4">
+                    <label>Al: </label><input type="date" class="form-control" name="ffin" id="ffin" value="2019-01-01">
+                  </div>
+                </div>
+                <br>
+                <input  class ="form-control" type="file" name="archivo" id="archivo">
+                <br><br>
+                <input type = "submit" value="Agregar" class="btn" id="botonProyNuevo">
+                <!--<button onclick="InsertarInforme()">Agregar</button>-->
               <form>
             </div><br>
         </div>
@@ -86,6 +110,8 @@
     <!-- Demo scripts for this page-->
     <script src="../js/demo/datatables-demo.js"></script>
     <script src="../js/demo/chart-area-demo.js"></script>
+
+    <script src="js/controllers.js"></script>
 
 </body>
 </html>

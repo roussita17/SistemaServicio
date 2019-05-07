@@ -7,4 +7,4 @@
               </span>
             </div>
           </div>
-        </footer>
+</footer>

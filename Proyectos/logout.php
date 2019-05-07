@@ -10,7 +10,7 @@
           <div class="modal-body">presione aceptar para cerrar sesion</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-            <a class="btn btn-primary" href="cierraSesion.php">Aceptar</a>
+            <a class="btn btn-primary" href="../cierraSesion.php">Aceptar</a>
           </div>
         </div>
       </div>

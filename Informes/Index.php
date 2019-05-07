@@ -13,7 +13,7 @@ if (!isset($_SESSION['Usuario'])){
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Sistema Servicio </title>
+    <title>Gestion de Informes </title>
 
     <!-- Bootstrap core CSS-->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -48,47 +48,27 @@ if (!isset($_SESSION['Usuario'])){
         <div class="container-fluid">
 
            <!-- Poner todo el desmadre que quieras aqui xD  -->
-           <h1> Vista de Proyectos</h1>
            
-           <div id="contenidoTabla" class="container table-responsive">
-           <table class="table table-hover">
-            <thead>
-            <tr>
-                <th>Clave del Proyecto</th>
-                <th>Titulo del Proyecto</th>
-                <th>Director del Proyecto</th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody>
-                <?php
-                include_once 'PHP/Conexion.php';
-                $bd = new Conexion(); 
-                $registros = $bd->query("SELECT `CveP`,`TituloP`,`DirProy` FROM `proyectos`");
-                if ($registros->num_rows > 0 ){
-                    while($reg = mysqli_fetch_array($registros)){
-                        echo '<tr>' ;
-                        //echo $reg['ID'].'<br>';
-                        echo '<td>'.$reg['CveP'].'</td>';
-                        echo '<td>'.$reg['TituloP'].'</td>';
-                        echo '<td>'.$reg['DirProy'].'</td>';
-                        echo '<td><button class="btn" onclick="selecInforme'."('".$reg['CveP']."'".')">Ver Mas</button></td>';
-                        echo '</tr>';
-                    }
-                }
-                $bd->close();
-                ?>
-           </tbody>
-           </table>
+           <div class="card mb-0" id="colorsito">
+             <div class="card-header">
+               <i class="fas fa-table"></i>
+               <span class="grande nito"> Gestion de Informes Registrados</span>
+             </div>
+            </div>
+
+            <div class="card-body" id="colorFondo">
+           <div id= "tablaFrame" class="table-responsive">
+            
            </div> 
         </div>
+      </div>
       </div>
     </div>
     <div id="Formulario" class="w3-modal">
         <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
             <div class="w3-center"><br>
                 <span onclick="document.getElementById('Formulario').style.display='none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Cerrar Formulario">×</span>
-                Descripcion General del Proyecto
+                Descripcion General Del Informe
             </div>
             <br>
             <div id="frmmodi" class="w3-container">
@@ -114,6 +94,7 @@ if (!isset($_SESSION['Usuario'])){
     <!-- Demo scripts for this page-->
     <script src="../js/demo/datatables-demo.js"></script>
     <script src="../js/demo/chart-area-demo.js"></script>
-    <script src="../js/modifi.js"></script>
+    
+    <script src="js/controllers.js"></script>
 </body>
 </html>

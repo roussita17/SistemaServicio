@@ -20,6 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 <link rel="stylesheet" href="../css/estilos.css">
 <link rel="stylesheet" href="../css/w3.css">
 <link rel="javascript" href="../js/Estilo.js">
@@ -39,22 +40,6 @@
         <div class="container-fluid">
 
            <!-- Poner todo el desmadre que quieras aqui xD  -->
-           <form class="card-filtro2">                          
-                <div class="input-group">
-                  <button type="button" class="boton" onClick = "checar()" ><i class="fas fa-fw fa-search"></i></button>
-                  <input type="text" class="txtbuscador2"  placeholder="Buscar">
-                  <label id="filtro2">
-                      <label class="radio-inline">
-                         <input type="radio" id="r1" name="optradio" value= "clave" checked>N&uacute;mero de Partida
-                      </label>
-
-                      <label class="radio-inline">
-                         <input type="radio" name="optradio" value= "Titulo">Descripci&oacute;n
-                      </label>  
-                  </label>              
-                </div>           
-            </form>         
-           <br><br><br>
            <div class="card mb-0" id="colorsito" >
              <div class="card-header">
                <i class="fas fa-table"></i>
@@ -63,7 +48,7 @@
            </div>
            <div class="card-body" id="colorFondo">
            <div  class="table-responsive">
-            <table class="table table-hover" width="100%" cellspacing="0">
+            <table class="table table-hover" id = "tablaMaster" width="100%" cellspacing="0">
             <thead>
              <tr>
                 <th>N&uacute;mero de Partida</th>
@@ -81,7 +66,7 @@
                         echo '<tr>' ;
                         //echo $reg['ID'].'<br>';
                         echo '<td>'.$reg['NumPartida'].'</td>';
-                        echo '<td>'.$reg['Descripcion'].'</td>';
+                        echo '<td>'.utf8_encode($reg['Descripcion']).'</td>';
                         echo '<td><button class="btn" id="boton" onclick="modificar('.$reg['NumPartida'].')">
                         Modificar  <span class="glyphicon">&#9998;</span>
                         </button></td>';
@@ -110,6 +95,7 @@
             <br>
         </div>
     </div>
+  </div>
 <?php require_once 'logout.php' ; ?>
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

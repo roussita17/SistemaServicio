@@ -7,13 +7,6 @@
   <title>Document</title>
 </head>
 <body>
-  
-
-
-
-
-
-
 <?php
 session_start();
 require_once 'Conexion.php';
@@ -45,14 +38,14 @@ $bd->close();
 <?php
 //print $dscr ;
 ?>
-Clave del Proyecto: <input type= "text" id="NumPart" value ="<?php echo $Cvep; ?>" class = "w3-input w3-border w3-margin-bottom">
-T&iacute;tulo del Proyecto: <input type= "text" id="Monto" value ="<?php echo $Titulo; ?>" class = "w3-input w3-border w3-margin-bottom">
-Fecha de Inicio: <input type= "text" id="Desc" value ="<?php echo $VigI; ?>" class = "w3-input w3-border w3-margin-bottom">
-Fecha de Finalizaci&oacute;n: <input type= "text" id="NumFact" value ="<?php echo $VigF; ?>" class = "w3-input w3-border w3-margin-bottom">
-Director del Proyecto:<input type= "text" id="NomEmp" value ="<?php echo $DirProy; ?>" class = "w3-input w3-border w3-margin-bottom">
-Colaboradores: <input type = "textarea" value="<?php echo $colab; ?>" class="w3-input w3-border w3-margin-bottom">
-Monto Aprobado: <input type = "textarea" value="<?php echo $mtap; ?>" class="w3-input w3-border w3-margin-bottom"><br>
-<button class="w3-button w3-blue" onclick="document.getElementById('Formulario').style.display='none'">Guardar</button>
+Clave del Proyecto: <input type= "text" id="CveP" value ="<?php echo $Cvep; ?>" class = "w3-input w3-border w3-margin-bottom">
+T&iacute;tulo del Proyecto: <input type= "text" id="TituloP" value ="<?php echo $Titulo; ?>" class = "w3-input w3-border w3-margin-bottom">
+Fecha de Inicio: <input type= "text" id="FI" value ="<?php echo $VigI; ?>" class = "w3-input w3-border w3-margin-bottom">
+Fecha de Finalizaci&oacute;n: <input type= "text" id="FF" value ="<?php echo $VigF; ?>" class = "w3-input w3-border w3-margin-bottom">
+Director del Proyecto:<input type= "text" id="DirProy" value ="<?php echo $DirProy; ?>" class = "w3-input w3-border w3-margin-bottom">
+Colaboradores: <input type = "textarea" id= "Colaboradores" value="<?php echo $colab; ?>" class="w3-input w3-border w3-margin-bottom">
+Monto Aprobado: <input type = "text" id= "Monto" value="<?php echo $mtap; ?>" class="w3-input w3-border w3-margin-bottom"><br>
+<button class="w3-button w3-blue" onclick="ActualizarProyecto()">Guardar</button>
 <button class="w3-button w3-green" onclick="document.getElementById('Formulario').style.display='none'">Aceptar</button>
 <button class="w3-button w3-red" onclick="document.getElementById('Formulario').style.display='none'">Eliminar</button>
 
