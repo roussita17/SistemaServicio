@@ -86,8 +86,8 @@ if (!isset($_SESSION['Usuario'])){
             </div>
             <br>
             <div>
-              Monto Aprovado:
-              <input class="w3-input" id="monto" type = "Text" placeholder = "Monto Aprovado para el proyecto">
+              Monto Aprobado:
+              <input class="w3-input" id="monto" type = "Text" placeholder = "Monto Aprobado para el proyecto">
             </div>
             <br>
               <input type="button" class="btn w3-color-blue" id="botonProyNuevo" value="Aceptar" onclick="insertarDatos()" data-target="#dialogo">

@@ -47,7 +47,7 @@
             <i class="fas fa-fw fa-table"></i>
             <span>Reportes</span></a>
           <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item" href="Reportes/Index.php">Crear Reporte</a>
+            <a class="dropdown-item" href="Reportes/CreaReporte.php">Crear Reporte</a>
           </div>
         </li>
       </ul>

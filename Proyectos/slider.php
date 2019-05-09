@@ -17,7 +17,7 @@
             <div class="dropdown-menu" aria-labelledby="pagesDropdown">
               <a class="dropdown-item" href="../Proyectos/Nuevo.php">Nuevo Proyecto</a>
               <a class="dropdown-item" href="../Proyectos/Index.php">Mostrador de Proyectos</a>
-              <a class="dropdown-item" href="../RPP.php">Agregar Partida a Proyecto</a>
+              <a class="dropdown-item" href="../Proyectos/RPP.php">Agregar Partida a Proyecto</a>
             </div>
           </li>
         <li class="nav-item dropdown ">
@@ -45,7 +45,7 @@
             <i class="fas fa-fw fa-table"></i>
             <span>Reportes</span></a>
           <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item" href="../Reportes/Index.php">Crear Reporte</a>
+            <a class="dropdown-item" href="../Reportes/CreaReporte.php">Crear Reporte</a>
           </div>
         </li>
       </ul>

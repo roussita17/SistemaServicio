@@ -1,19 +1,7 @@
 body{
     margin: auto 0px;
 }
-#filtro{
-    padding-left: 20px;
-    font-size: 0.7em;
-    padding-top: 14px;
-    margin: auto 0px;
-}
-#filtro2{
-    padding-left: 40px;
-    font-size: 0.7em;
-    padding-top: 14px;
-    padding-right: 10px;
-    margin: auto 0px;
-}
+
 #boton{
     background-color: lightblue;
     color:black;
@@ -34,7 +22,30 @@ body{
 #fondoP{
     background-color: #129ABC;
 }
+#fondoTarjeta{
+    max-width: 730px;
+    height: 900px;
+}
+#f1{
+    width: 160px;
+    height: 36px;
+    border-radius: 3px;
+    border: 1px solid #DEDEE5;
 
+}
+.fecha1{
+    width: 160px;
+    height: 36px;
+    border-radius: 3px;
+    border: 1px solid #DEDEE5;
+}
+.txt{
+    width: 650px;
+    height: 36px;
+    border-radius: 3px;
+    border: 1px solid #DEDEE5;
+
+}
 .btncerrar{
     float: right;
     background: red;
@@ -54,46 +65,17 @@ body{
     top: -20px;
     opacity:3.8;
 }
+.logo2{
+    position: relative;
+    width: 10px;
+    height: 10px;
+
+
+}
 .fondito{
     background-color: #F7F6F2;
 }
-.txtbuscador{
-    margin-top: 8px;
-    border: 1px solid lightgray;
-    border-radius: 6px;
-    width: 240px;
-    height: 30px;
-    padding-left: 5px;
-    margin-left: 1px;
-}
-.txtbuscador2{
-    margin-top: 8px;
-    border: 1px solid lightgray;
-    border-radius: 6px;
-    width: 240px;
-    height: 30px;
-    padding-left: 5px;
-    margin-left: 1px;
-}
 
-.card-filtro{
-    float: right;
-    width: 670px; 
-    height: 53px;
-    background-color:#e0d9d9;
-    border: 1px solid lightgray;
-    border-radius: 3px;
-    margin: auto 0px;
-}
-.card-filtro2{
-    float: right;
-    width: 540px; 
-    height: 53px;
-    background-color:#e0d9d9;
-    border: 1px solid lightgray;
-    border-radius: 3px;
-    margin: auto 0px;
-}
 .boton{
     margin-top: 8px;
     background-color: #34A1F5;
@@ -104,9 +86,7 @@ body{
     height: 30px;
     padding-right: 12px;
     margin-right: -2px;
- 
 }
-
 
 .grande{
     margin-left: 15px;
@@ -121,6 +101,7 @@ body{
 .nito{
     font-weight: bold;
 }
+
 .slider{
     margin: auto 0px;
     min-height: 1024px; 
