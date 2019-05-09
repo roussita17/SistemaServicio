@@ -18,7 +18,8 @@ $bd->close();
 //print $dscr ;
 ?>
 N&uacute;mero de partida: <input type= "text" id="NumPart" value ="<?php echo $np; ?>" class = "w3-input w3-border w3-margin-bottom"><br>
-Descripci&oacute;n de Partida: <input type= "text" id="Desc" value ="<?php echo $dscr; ?>" class = "w3-input w3-border w3-margin-bottom"><br>
+Descripci&oacute;n de Partida:
+ <textarea rows="7" type= "text" id="Desc"  class = "w3-input w3-border w3-margin-bottom"><?php echo $dscr; ?>"</textarea><br>
 <button class="w3-button w3-blue" onclick="actualiza()">Guardar Cambios</button>
 <button class="w3-button w3-green" onclick="document.getElementById('Formulario').style.display='none'">Aceptar</button>
 </div>
