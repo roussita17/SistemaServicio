@@ -45,24 +45,108 @@
              <span class="mediana nito ">Nueva Partida a Proyecto Existente</span>
             </div>
            <div class="card-body">
+            <div class="form-group">
+                <label for="cvep">Nombre del Proyecto:</label>
+                <select class = "form-control" id="cvep" name = "cvep">
+                  <?php
+                      require 'PHP/Conexion.php';
+                      $bd = new Conexion(); 
+                      $registros = $bd->query("SELECT `CveP`,`TituloP` FROM `proyectos`");
+                      if ($registros->num_rows > 0 ){
+                      while($reg = mysqli_fetch_array($registros)){
+                          echo '<option value="'.$reg[0].'">'.$reg[1].'</option>' ; 
+                        }
+                      }
+                  ?>
+                </select>
+            </label>
+            </div>
+            <div class="input-group form-group">
+              <label for="Cvepart">Clave de Partida:</label><br>
+              <input type="text" name="Cvepart" id="Cvepart" class="form-control" placeholder="Buscar">
+              <div class="input-group-append">
+                <button class="btn btn-success" data-toggle="modal" data-target="#frmBusqueda">Buscar</button> 
+              </div>
+            </div>
             <div>
-            <label class="control-label col-sm-6" >Clave de Proyecto:</label>
-            <input class="w3-input" type = "Text" placeholder = "Clave de Proyecto" name="cvep">
-            </div><br>
-            <div >
-            <label class="control-label col-sm-6" >Clave de Partida:</label>
-            <input class="w3-input" type = "Text" placeholder = "Clave de partida" name="Cvepart" id="Desc">
+            <label class="control-label col-sm-6" >Monto Aprobado:</label>
+            <input class="form-control" type = "Text" placeholder = "Monto Aprobado" id="map">
               <br><br>
-              <input type = "submit" value="Aceptar" class="btn" id="botonProyNuevo" onClick="inserta()">
+              <button class="btn" id="botonProyNuevo" onClick="CreateRelation()">Guardar</button>
               <form>
             </div><br><br>
         </div>
-</span>
+        </span>
 
         </div>
         </span> 
       </div>
     </div>
+
+<div class="modal fade" id="frmBusqueda" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Listado De Totas Las Partidas</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div  class="table-responsive">
+              <table class="table table-hover" id = "tablaMaster" width="100%" cellspacing="0">
+                <thead>
+                 <tr>
+                    <th>N&uacute;mero de Partida</th>
+                    <th>Descripci&oacute;n</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    include_once 'PHP/Conexion.php';
+                    $bd = new Conexion(); 
+                    $registros = $bd->query("SELECT `NumPartida`,`Titulo` FROM `partidas` WHERE 1");
+                    if ($registros->num_rows > 0 ){
+                        while($reg = mysqli_fetch_array($registros)){
+                            echo '<tr>' ;
+                            //echo $reg['ID'].'<br>';
+                            echo '<td>'.$reg['NumPartida'].'</td>';
+                            echo '<td>'.utf8_encode($reg['Titulo']).'</td>';
+                            echo '<td><button class="btn" id="boton" onclick="aceptar('.$reg['NumPartida'].')">
+                            Seleccionar <span class="glyphicon">&#9998;</span>
+                            </button></td>';
+                            echo '</tr>';
+                        }
+                    }
+                    $bd->close();
+                    ?>
+                 </tbody>
+               </table>
+             </div> 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="modal fade" id="frmResultado" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Listado De Totas Las Partidas</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div id="resultadosquery">
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 <?php require_once 'logout.php' ; ?>
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -82,7 +166,7 @@
     <script src="../js/demo/datatables-demo.js"></script>
     <script src="../js/demo/chart-area-demo.js"></script>
 
-    <script src="js/controllers.js"></script>
+    <script src="js/modifi.js"></script>
 
 </body>
 </html>

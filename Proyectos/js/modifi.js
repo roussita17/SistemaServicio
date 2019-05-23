@@ -193,3 +193,25 @@ function checar(){
         }
     });
 }
+
+function CreateRelation(){
+    //alert($("#Cvepart option:selected").text());
+    $.ajax({
+        data:{"opc":4,"cvepart":$("#Cvepart").val(),"cvep":$("#cvep").val(),"mapro":$("#map").val()},
+        url: 'PHP/Modelo.php',
+        type : 'POST',
+        beforeSend : function(){
+            console.log("realizando transaccion");
+        },
+        success : function(response){
+            console.log(response);
+            $("#resultadosquery").html(response);
+            $("#frmResultado").modal('show');
+        }
+    });
+}
+
+function aceptar(val){
+    $("#Cvepart").val(val);
+    $('#frmBusqueda').modal('hide');
+}

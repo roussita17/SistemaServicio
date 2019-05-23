@@ -17,11 +17,6 @@ function inseccion(){
             $("#equivocado").html(response);
             if(response == "Usuario Valido"){
                 document.getElementById('emergente').style.display='block';
-                //alert('usuario valido') ;
-                //window.locationf == "http://Bienvenida.php";
-                //v = true ;
-                //$(location).attr('href',"Bienvenida.php"); 
-                //setTimeout($(location).attr('href',"Bienvenida.php"),100000); 
             }
             //alert(response);
             //alert($("#equivocado").val());  

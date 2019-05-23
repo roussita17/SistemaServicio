@@ -44,12 +44,8 @@ function modificar(valor){
     });
 }
 function inserta(){
-    if($("#Monto").val()>24000){
-        alert("El monto a registrar excede el limite") ;
-        return ;
-    }
     $.ajax({
-        data : {"NumPart" : $("#NumPart").val(),"Desc" : $("#Desc").val()},
+        data : {"numpart" : $("#numpart").val(),"Desc" : $("#Desc").val()},
         url: 'PHP/Insertar.php',
         type: 'POST' , 
         beforeSend : function(){
@@ -88,4 +84,9 @@ function actualiza(){
 }
 function cierraFormulario(){
     onclick="document.getElementById('Formulario').style.display='none'";
+}
+function aceptar(val){
+    alert("as");
+    $("#Cvepart").val(val);
+    $('#myfrmBusqueda').modal('hide');
 }

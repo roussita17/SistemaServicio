@@ -62,6 +62,22 @@ switch ($data) {
         $tabla .= '</tbody></table>';
         echo $tabla ; 
 	break ;
+	case 4:	//crear relacion de Proyectos con Partidas  
+		$cvep = mysqli_real_escape_string($bd,$_POST['cvep']);
+		$cvepart = mysqli_real_escape_string($bd,$_POST['cvepart']);
+		$map = mysqli_real_escape_string($bd,$_POST['mapro']);
+		/*$bd->query("INSERT INTO `proyectopartidas`(`Cvep`, `NumPartida`, `MontoUA`) VALUES ('".$cvep."','".$cvepart."',".$map.")") or die ($bd->error);
+		*/
+		$resultado = "" ;
+		$registros = $bd->query("call sp_CRPP('".$cvep."',".$cvepart.",".$map.")");
+                if ($registros->num_rows > 0 ){
+                    while($reg = mysqli_fetch_array($registros)){
+                        $resultado = $reg[0];
+                    }
+                }
+        $bd->close();
+		echo $resultado;
+	break ; 
 	default:
 		# code...
 		break;
