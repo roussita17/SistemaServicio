@@ -13,6 +13,7 @@ body{
 #colorsito{
     background-color:#85C8D9;
     margin: auto 0px;
+    height: 55px;
 }
 
 #botonProyNuevo{
@@ -23,8 +24,9 @@ body{
     background-color: #129ABC;
 }
 #fondoTarjeta{
-    max-width: 730px;
-    height: 900px;
+    margin:  auto 0 px;
+    min-width: 730px;
+    min-height: 1050px;
 }
 #f1{
     width: 160px;
@@ -33,12 +35,50 @@ body{
     border: 1px solid #DEDEE5;
 
 }
+#fechaIzq{
+    width: 155px;
+    height: 25px;
+    border-radius: 3px;
+    border: 1px solid #DEDEE5;
+    margin-left: 500px;
+    margin-top:-20px;
+}
+#fAvance{
+    width: 90px;
+    height: 25px;
+}
+#montoEjer{
+    width: 120px;
+    height: 25px;
+}
+#banner{
+   
+    background-color: #2196f3;
+    height: 72px;
+
+}
+#fondoSlider{
+    background-color: #424242;
+    position: fixed;
+
+}
+#tabla{
+   width: 675px;
+   height: 120px;
+}
+#tabla2{
+    width: 675px;
+    height: 140px;
+ }
+
+
 .fecha1{
     width: 160px;
     height: 36px;
     border-radius: 3px;
     border: 1px solid #DEDEE5;
 }
+
 .txt{
     width: 650px;
     height: 36px;
@@ -59,11 +99,20 @@ body{
 }
 .Logo{
     position: relative;
-    width: 180px;
-    height: 80px;
-    left: 16px;
-    top: -20px;
+    width: 175px;
+    height: 56px;
+    left: 24px;
+    top: -63px;
     opacity:3.8;
+}
+.loguito{
+    position: relative;
+    width: 224px;
+    height: 72px;
+    left: 1px;
+    top: -128px;
+    background-color: rgba(0, 25, 253, 0.4);
+    border: transparent;
 }
 .logo2{
     position: relative;
@@ -74,6 +123,9 @@ body{
 }
 .fondito{
     background-color: #F7F6F2;
+}
+.fonditoD{
+    background-color: rgba(173, 167, 167, 0.4);
 }
 
 .boton{
@@ -97,6 +149,10 @@ body{
    font-size: 1.6em;
    font-family: Verdana Tahoma, sans-serif;
 }
+.chica{
+    font-size: 0.8em;
+    font-family: sans-serif;
+}
 
 .nito{
     font-weight: bold;
@@ -106,4 +162,9 @@ body{
     margin: auto 0px;
     min-height: 1024px; 
 }
+.izquierda{
+    margin-left: 430px;
+
+}
+
 
